@@ -19,11 +19,13 @@ export class AppComponent  implements OnInit {
         username: new FormControl(null),
         dob: new FormControl(null),
         gender: new FormControl('male'), // default value
-        street: new FormControl(null),
-        country: new FormControl('georgia'), // default value
-        city: new FormControl(null),
-        region: new FormControl(null),
-        postal: new FormControl(null)
+        address: new FormGroup({
+          street: new FormControl(null,Validators.required),
+          country: new FormControl('georgia',Validators.required), // default value
+          city: new FormControl(null,Validators.required),
+          region: new FormControl(null),
+          postal: new FormControl(null,Validators.required)
+        })
       })
   }
   

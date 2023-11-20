@@ -15,11 +15,11 @@
     </div>
 
     <div class="email">
-      <input  type="email" placeholder="Email" formControlName="email">
+      <input type="email" placeholder="Email" formControlName="email">
       <small *ngIf="reactiveForm.get('email').invalid
                && reactiveForm.get('email').touched">*Email is not valid</small>
     </div>
-  
+
 
     <div class="group">
       <div class="username"><input type="text" placeholder="Usernmae" formControlName="username"></div>
@@ -47,7 +47,7 @@
     </div>
 
 
-    <div class="adress">
+    <div class="adress" formGroupName="address">
       <label for="">Addresss</label>
       <input class="address" type="text" placeholder="Street Address" formControlName="street">
 
@@ -67,7 +67,7 @@
         <input type="text" placeholder="Postal Code" formControlName="postal">
       </div>
 
-
+      <small *ngIf="reactiveForm.get('address').invalid && reactiveForm.get('address').touched">*Fill all required fields</small>
     </div>
 
     <button type="submit" value="submit" [disabled]="reactiveForm.invalid">Submit</button>
