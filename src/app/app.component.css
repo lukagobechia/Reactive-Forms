@@ -6,6 +6,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 97vh;
 
 }
 
@@ -48,10 +49,18 @@ button:hover {
 #gen{
     margin: 0 0 10px 0;
 }
+.Gender{
+    display: flex;
+    gap: 20px;
+}
 .Gender div{
     display: flex;
     align-items: center;
 }
 .Gender div input{
 width: 10px;
+}
+.group{
+    display: flex;
+    gap: 10px;
 }
