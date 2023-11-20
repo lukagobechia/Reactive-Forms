@@ -26,14 +26,21 @@ label {
 
 input,
 select {
-    width: 100%;
+    width: 200px;
     padding: 8px;
-    margin-bottom: 16px;
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-
+input[type=email], .address{
+    width:400px;
+}
+.address, .email{
+    margin-bottom: 16px;
+}
+.username, .dob{
+    margin-bottom: 5px;
+}
 button {
     background-color: rebeccapurple;
     color: #fff;
@@ -77,8 +84,12 @@ button:hover {
 .group {
     display: flex;
     gap: 10px;
+    margin-bottom: 16px;
 }
 
 input.ng-invalid.ng-touched{
     border: red 1px solid;
+}
+small{
+    color: red;
 }
