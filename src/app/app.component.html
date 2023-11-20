@@ -26,7 +26,13 @@
 
 
     <div class="group">
-      <div class="username"><input type="text" placeholder="Usernmae" formControlName="username"></div>
+      <div class="username">
+        <input type="text" placeholder="Usernmae" formControlName="username">
+        <small *ngIf="this.reactiveForm.get('username').errors?.['required'] && this.reactiveForm.get('username').touched">*Username is Required</small>
+        <small *ngIf="this.reactiveForm.get('username').errors?.['usernameNotAllowed'] 
+                ">*Username is Already Taken</small>
+
+      </div>
       <div class="dob"><input type="date" id="dob" name="dob" formControlName="dob"></div>
     </div>
 
