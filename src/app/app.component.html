@@ -73,12 +73,44 @@
 
     <div formArrayName="skills">
       <label for="">Add skills</label>
-      <div *ngFor="let control of reactiveForm.get('skills')['controls']; let i = index" >
+      <div *ngFor="let control of reactiveForm.get('skills')['controls']; let i = index">
         <input class="skillsInput" type="text" placeholder="Add skill..." [formControlName]="i">
         <button class="deleteButton" type="button" (click)="deleteSkills(i)">Delete</button>
       </div>
       <button type="button" (click)="addSkills()">Add Skill</button>
     </div>
+
+    <section>
+      <div class="input-box" formArrayName="experience">
+        <div class="experience" *ngFor="let exp of reactiveForm.get('experience')['controls']; let i = index;" 
+        [formGroupName]="i" >
+          <label>Experience {{i + 1}} </label>
+          
+          <input type="text" placeholder="Company Name" formControlName="company" />
+          
+          <div class="column">
+            <div class="select-box">
+              <select formControlName="position">
+                <option hidden>Position</option>
+                <option>Junior Developer</option>
+                <option>Software Developer</option>
+                <option>Senior Developer</option>
+                <option>Team Lead</option>
+              </select>
+            </div>
+            <input type="number" placeholder="Experience" formControlName="experience" />
+          </div>
+
+          <div class="column">
+            <input type="date" placeholder="Start Date" formControlName="start" />
+
+            <input type="date" placeholder="End Date" formControlName="end" />
+          </div>
+          <button type="button" (click)="deleteExp(i)" class="btn-add-delete">Delete Experience</button>
+        </div>
+      </div>
+      <button type="button" (click)="addExp()" class="btn-add-delete">Add Experience</button>
+    </section>
 
     <button style="margin-top: 10px;" type="submit" value="submit" [disabled]="reactiveForm.invalid">Submit</button>
   </form>

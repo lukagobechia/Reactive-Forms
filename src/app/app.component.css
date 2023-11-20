@@ -51,7 +51,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: rgb(71, 31, 111);
 }
 
 #gen {
@@ -100,3 +100,58 @@ small{
 .deleteButton{
     margin: 0 0 0 10px;
 }
+
+
+
+
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.input-box {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 400px;
+}
+
+.experience {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.select-box {
+    position: relative;
+}
+
+select {
+    width: calc(100% - 20px);
+}
+
+.column {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
