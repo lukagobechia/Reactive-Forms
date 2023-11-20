@@ -7,7 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 97vh;
-
+    background-color: rgb(69, 27, 111);
 }
 
 form {
@@ -46,31 +46,35 @@ button {
 button:hover {
     background-color: #45a049;
 }
-#gen{
+
+#gen {
     margin: 0 0 10px 0;
 }
-.Gender{
+
+.Gender {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 10px 0 10px 0;
+    padding: 10px 0 10px 0
 }
 
-.Gender .genInputs{
+.Gender .genInputs {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     gap: 30px;
 }
-.Gender .genInputs div{
+
+.Gender .genInputs div {
     display: flex;
     justify-content: center;
 }
-.Gender .genInputs div input{
-width: 15px;
+
+.Gender .genInputs div input {
+    width: 15px;
 }
 
-.group{
+.group {
     display: flex;
     gap: 10px;
 }
