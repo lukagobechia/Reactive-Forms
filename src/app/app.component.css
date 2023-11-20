@@ -78,3 +78,7 @@ button:hover {
     display: flex;
     gap: 10px;
 }
+
+input.ng-invalid.ng-touched{
+    border: red 1px solid;
+}
