@@ -51,15 +51,25 @@ button:hover {
 }
 .Gender{
     display: flex;
+    flex-direction: column;
     gap: 20px;
+    padding: 10px 0 10px 0;
 }
-.Gender div{
+
+.Gender .genInputs{
     display: flex;
+    justify-content: start;
     align-items: center;
+    gap: 30px;
 }
-.Gender div input{
-width: 10px;
+.Gender .genInputs div{
+    display: flex;
+    justify-content: center;
 }
+.Gender .genInputs div input{
+width: 15px;
+}
+
 .group{
     display: flex;
     gap: 10px;
