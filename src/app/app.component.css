@@ -6,7 +6,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 97vh;
+    min-height: 97vh;
     background-color: rgb(69, 27, 111);
 }
 
@@ -92,4 +92,11 @@ input.ng-invalid.ng-touched{
 }
 small{
     color: red;
+}
+.skillsInput{
+    width: 70%;
+    margin: 5px 0 5px 0;
+}
+.deleteButton{
+    margin: 0 0 0 10px;
 }

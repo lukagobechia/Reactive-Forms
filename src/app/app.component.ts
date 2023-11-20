@@ -27,13 +27,18 @@ export class AppComponent  implements OnInit {
           postal: new FormControl(null,Validators.required)
         }),
         skills: new FormArray([
-          new FormControl(null),
-          new FormControl(null)
+          new FormControl(null,Validators.required)
         ])
       })
   }
   
   onSubmit(){
     console.log(this.reactiveForm);
+  }
+  addSkills(){
+    (<FormArray>this.reactiveForm.get('skills')).push(new FormControl(null, Validators.required));
+  }
+  deleteSkills(index: number){
+    (<FormArray>this.reactiveForm.get('skills')).removeAt(index);
   }
 }

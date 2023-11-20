@@ -67,14 +67,19 @@
         <input type="text" placeholder="Postal Code" formControlName="postal">
       </div>
 
-      <small *ngIf="reactiveForm.get('address').invalid && reactiveForm.get('address').touched">*Fill all required fields</small>
+      <small *ngIf="reactiveForm.get('address').invalid && reactiveForm.get('address').touched">*Fill all required
+        fields</small>
     </div>
 
     <div formArrayName="skills">
-      <input  style="width: 400px; margin-bottom: 5px;" type="text" placeholder="Add skill..." 
-       *ngFor="let control of reactiveForm.get('skills')['controls']; let i = index" [formControlName] = "i">
+      <label for="">Add skills</label>
+      <div *ngFor="let control of reactiveForm.get('skills')['controls']; let i = index" >
+        <input class="skillsInput" type="text" placeholder="Add skill..." [formControlName]="i">
+        <button class="deleteButton" type="button" (click)="deleteSkills(i)">Delete</button>
+      </div>
+      <button type="button" (click)="addSkills()">Add Skill</button>
     </div>
 
-    <button type="submit" value="submit" [disabled]="reactiveForm.invalid">Submit</button>
+    <button style="margin-top: 10px;" type="submit" value="submit" [disabled]="reactiveForm.invalid">Submit</button>
   </form>
 </body>
